@@ -6,7 +6,6 @@ sidebar_position: 1
 
 Clicking this should copy the full URL with `#click-me` anchor.
 
-
 # Tutorial Intro
 
 Let's discover **Docusaurus in less than 5 minutes**.
