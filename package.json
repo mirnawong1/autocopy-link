@@ -1,12 +1,23 @@
 {
-  "name": "docusaurus-plugin-auto-header-link-copy",
+  "name": "autocopy-link",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Docusaurus plugin to auto-copy anchor links on header click.",
+  "main": "src/index.js",
+  "keywords": [
+    "docusaurus",
+    "plugin",
+    "anchor",
+    "header",
+    "link",
+    "copy"
+  ],
+  "author": "Mirna Wong",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mirnawong1/autocopy-link"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "peerDependencies": {
+    "@docusaurus/core": "^2.0.0"
+  }
 }
