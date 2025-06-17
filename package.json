@@ -3,6 +3,21 @@
   "version": "0.0.1",
   "main": "src/index.js",
   "type": "commonjs",
-  "keywords": ["docusaurus-plugin"],
-  "license": "MIT"
+  "keywords": [
+    "docusaurus-plugin"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "clipboard": "^2.0.11"
+  },
+  "devDependencies": {
+    "@docusaurus/core": "3.8.1",
+    "@docusaurus/preset-classic": "3.8.1",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "workspaces": ["example"]
 }

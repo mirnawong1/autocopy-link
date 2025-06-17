@@ -1,0 +1,44 @@
+h3.anchor a.hash-link:before,
+h2.anchor a.hash-link:before {
+  content: "";
+  background-image: url('/img/copy.png');
+  background-size: 18px 18px;
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+  filter: invert(1) brightness(0);
+}
+
+[data-theme="dark"] h3.anchor a.hash-link:before,
+[data-theme="dark"] h2.anchor a.hash-link:before {
+  filter: brightness(100); 
+}
+
+h3.anchor.clicked a.hash-link:before,
+h2.anchor.clicked a.hash-link:before {
+  background-image: url('/img/check.png');
+  background-size: 18px 13px;
+  height: 13px;
+}
+
+.copy-popup {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-transform-orange-600);
+  color: var(--text-neutral-primary);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.close-button {
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.close-button:hover {
+  color: #fff; /* Change color on hover if desired */
+}
