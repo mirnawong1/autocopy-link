@@ -25,7 +25,7 @@ const config = {
       ],
     ],
   
-    plugins: [require.resolve('../src/index.js')],
+    plugins: ['autocopy-link'],
 
   };
   

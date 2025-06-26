@@ -39,6 +39,10 @@ function pluginAutocopyLink() {
               .copy-popup .close-button:hover {
                 color: #ddd;
               }
+
+              .anchor::after {
+                content: '🔗' !important;
+              }
             `,
           },
         ],
