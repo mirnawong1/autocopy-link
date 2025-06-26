@@ -1,10 +1,47 @@
-import './custom.css';
-
 function pluginAutocopyLink() {
   return {
     name: 'autocopy-link',
     injectHtmlTags() {
       return {
+        headTags: [
+          {
+            tagName: 'style',
+            attributes: {
+              type: 'text/css',
+            },
+            innerHTML: `
+              .copy-popup {
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #6a0dad; /* purple */
+                color: #fff;
+                padding: 12px 20px;
+                border-radius: 8px;
+                font-size: 15px;
+                font-weight: 500;
+                z-index: 9999;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                display: flex;
+                align-items: center;
+                gap: 8px;
+              }
+
+              .copy-popup .close-button {
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 18px;
+                margin-left: 10px;
+                color: #fff;
+              }
+
+              .copy-popup .close-button:hover {
+                color: #ddd;
+              }
+            `,
+          },
+        ],
         postBodyTags: [
           {
             tagName: 'script',
@@ -12,7 +49,6 @@ function pluginAutocopyLink() {
               type: 'text/javascript',
             },
             innerHTML: `
-              // Load ClipboardJS from CDN
               const script = document.createElement('script');
               script.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js';
               script.onload = () => {
@@ -22,7 +58,6 @@ function pluginAutocopyLink() {
                   headers.forEach((header) => {
                     header.style.cursor = "pointer";
 
-                    // Remove trailing dashes
                     header = (function removeTrailingDashes(h) {
                       const id = h?.getAttribute("id");
                       if (id?.endsWith("-")) {
@@ -43,17 +78,18 @@ function pluginAutocopyLink() {
                       const popup = document.createElement('div');
                       popup.classList.add('copy-popup');
                       popup.innerText = 'Link copied!';
-                      document.body.appendChild(popup);
 
                       const closeButton = document.createElement('span');
                       closeButton.classList.add('close-button');
-                      closeButton.innerHTML = ' &times;';
+                      closeButton.innerHTML = '&times;';
                       closeButton.addEventListener('click', () => {
                         if (document.body.contains(popup)) {
                           document.body.removeChild(popup);
                         }
                       });
+
                       popup.appendChild(closeButton);
+                      document.body.appendChild(popup);
 
                       setTimeout(() => {
                         if (document.body.contains(popup)) {
@@ -77,7 +113,7 @@ function pluginAutocopyLink() {
                 window.addEventListener("load", copyHeader);
               };
               document.head.appendChild(script);
-            `, // <-- Close the template literal here
+            `,
           },
         ],
       };

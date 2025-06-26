@@ -1,14 +1,11 @@
 {
   "name": "autocopy-link",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "src/index.js",
-  "type": "commonjs",
-  "keywords": [
-    "docusaurus-plugin"
-  ],
+  "keywords": ["docusaurus", "plugin", "anchor", "copy-link", "docs"],
   "license": "MIT",
-  "dependencies": {
-    "clipboard": "^2.0.11"
+  "peerDependencies": {
+    "@docusaurus/core": "^3.0.0"
   },
   "devDependencies": {
     "@docusaurus/core": "3.8.1",
