@@ -1,0 +1,30 @@
+{
+  "name": "autocopy-link",
+  "version": "1.0.0",
+  "description": "Docusaurus plugin that automatically copies header anchor links to clipboard when clicked",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mirnawong1/autocopy-link.git"
+  },
+  "homepage": "https://github.com/mirnawong1/autocopy-link#readme",
+  "bugs": {
+    "url": "https://github.com/mirnawong1/autocopy-link/issues"
+  },
+  "author": "mirnawong1",
+  "keywords": ["docusaurus", "plugin", "anchor", "copy-link", "docs", "clipboard", "header"],
+  "license": "MIT",
+  "peerDependencies": {
+    "@docusaurus/core": "^3.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/core": "3.8.1",
+    "@docusaurus/preset-classic": "3.8.1",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "workspaces": ["example"]
+}
